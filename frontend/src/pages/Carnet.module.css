@@ -1,0 +1,283 @@
+.page {
+  padding: 2rem;
+  max-width: 780px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.backLink {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(0,40,104,0.07);
+  transition: background 0.15s;
+}
+
+.backLink:hover { background: rgba(0,40,104,0.14); }
+
+.printBtn {
+  padding: 0.6rem 1.25rem;
+  background: var(--text);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.printBtn:hover { background: #0f172a; }
+
+/* ── El Carné ── */
+.carnetWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.carnet {
+  width: 100%;
+  max-width: 680px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0, 40, 104, 0.18);
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+}
+
+.carnetInactivo {
+  filter: grayscale(0.3);
+  border-color: #fca5a5;
+}
+
+/* Header */
+.carnetHeader {
+  background: var(--primary);
+  overflow: hidden;
+}
+
+.flagStrip {
+  display: flex;
+  height: 6px;
+}
+
+.flagStrip span { flex: 1; }
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.orgIcon {
+  font-size: 2rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.orgName {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+.orgTagline {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.estadoBadge {
+  margin-left: auto;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.estado_activo     { background: #dcfce7; color: #15803d; }
+.estado_vencido    { background: #fef3c7; color: #b45309; }
+.estado_suspendido { background: #fee2e2; color: #b91c1c; }
+
+/* Body */
+.carnetBody {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Columna izquierda */
+.carnetLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.empFoto {
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0,40,104,0.2);
+}
+
+.qrWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f8faff;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.qrLabel {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin: 0;
+  text-align: center;
+}
+
+/* Columna derecha */
+.carnetRight {
+  flex: 1;
+  min-width: 0;
+}
+
+.empNombre {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.empCargo {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0.2rem 0 0;
+}
+
+.empDepto {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0.1rem 0 0;
+}
+
+.separator {
+  height: 1px;
+  background: var(--border);
+  margin: 1rem 0;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.dataItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.dataLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.dataVal {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer */
+.carnetFooter {
+  background: #f8faff;
+  border-top: 2px solid var(--primary);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footerDivider {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+
+.footerLabel {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.footerVal {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Misc */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 1rem;
+}
+
+.backBtn {
+  padding: 0.6rem 1.25rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Print */
+@media print {
+  .toolbar { display: none; }
+  .page { padding: 0; }
+  .carnetWrap { justify-content: flex-start; }
+  .carnet { box-shadow: none; border-color: #000; }
+}

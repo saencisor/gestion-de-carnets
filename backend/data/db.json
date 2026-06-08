@@ -1,0 +1,74 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "rol": "admin"
+    }
+  ],
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Carlos Andrés Gómez",
+      "cedula": "1023456789",
+      "cargo": "Instructor de Inglés",
+      "departamento": "Académico",
+      "email": "carlos.gomez@colombiaesl.com",
+      "telefono": "+57 310 234 5678",
+      "fechaIngreso": "2022-03-15",
+      "activo": true,
+      "foto": "https://i.pravatar.cc/150?img=11"
+    },
+    {
+      "id": 2,
+      "nombre": "María Fernanda Rodríguez",
+      "cedula": "52987654",
+      "cargo": "Coordinadora Académica",
+      "departamento": "Coordinación",
+      "email": "maria.rodriguez@colombiaesl.com",
+      "telefono": "+57 315 876 4321",
+      "fechaIngreso": "2020-08-01",
+      "activo": true,
+      "foto": "https://i.pravatar.cc/150?img=47"
+    },
+    {
+      "id": 3,
+      "nombre": "Jhon Sebastián Vargas",
+      "cedula": "1098765432",
+      "cargo": "Asesor Comercial",
+      "departamento": "Ventas",
+      "email": "jhon.vargas@colombiaesl.com",
+      "telefono": "+57 301 555 7890",
+      "fechaIngreso": "2023-01-10",
+      "activo": true,
+      "foto": "https://i.pravatar.cc/150?img=33"
+    }
+  ],
+  "carnets": [
+    {
+      "id": 1,
+      "empleadoId": 1,
+      "codigo": "ESL-2022-001",
+      "fechaEmision": "2022-03-15",
+      "fechaVencimiento": "2024-03-15",
+      "estado": "vencido"
+    },
+    {
+      "id": 2,
+      "empleadoId": 2,
+      "codigo": "ESL-2020-002",
+      "fechaEmision": "2020-08-01",
+      "fechaVencimiento": "2026-08-01",
+      "estado": "activo"
+    },
+    {
+      "id": 3,
+      "empleadoId": 3,
+      "codigo": "ESL-2023-003",
+      "fechaEmision": "2023-01-10",
+      "fechaVencimiento": "2025-01-10",
+      "estado": "activo"
+    }
+  ]
+}
