@@ -7,14 +7,20 @@ import Dashboard from './pages/Dashboard';
 import Empleados from './pages/Empleados';
 import Carnet from './pages/Carnet';
 import Validar from './pages/Validar';
+import Portal from './pages/portal/Portal';
+import PortalCarnet from './pages/portal/PortalCarnet';
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* ── Rutas públicas ── */}
           <Route path="/login" element={<Login />} />
+          <Route path="/portal" element={<Portal />} />
+          <Route path="/portal/:cedula" element={<PortalCarnet />} />
 
+          {/* ── Panel administrativo (requiere JWT) ── */}
           <Route
             path="/"
             element={

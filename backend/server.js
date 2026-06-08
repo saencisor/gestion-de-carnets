@@ -7,6 +7,7 @@ const swaggerUi = require('swagger-ui-express');
 const authRoutes = require('./routes/auth');
 const empleadosRoutes = require('./routes/empleados');
 const carnetsRoutes = require('./routes/carnets');
+const portalRoutes = require('./routes/portal');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -100,6 +101,7 @@ app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
 app.use('/api/auth', authRoutes);
 app.use('/api/empleados', empleadosRoutes);
 app.use('/api/carnets', carnetsRoutes);
+app.use('/api/portal', portalRoutes); // público — sin JWT
 
 // Ruta raíz
 app.get('/', (req, res) => {

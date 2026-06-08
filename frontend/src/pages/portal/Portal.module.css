@@ -1,0 +1,152 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: #f8faff;
+}
+
+/* Fondo decorativo bandera */
+.bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 0;
+}
+.bgBlue   { flex: 2; background: #002868; opacity: 0.06; }
+.bgRed    { flex: 1; background: #CE1126; opacity: 0.06; }
+.bgYellow { flex: 0.5; background: #FCD116; opacity: 0.08; }
+
+/* Tarjeta central */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 40, 104, 0.13);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+  animation: rise 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #002868, #CE1126);
+  border-radius: 18px;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 40, 104, 0.25);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #002868;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0.3rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* Descripción */
+.desc {
+  font-size: 0.9rem;
+  color: #475569;
+  text-align: center;
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+  padding: 0 0.5rem;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 11px;
+  font-size: 1.05rem;
+  color: #1e293b;
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.input:focus {
+  border-color: #002868;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 40, 104, 0.08);
+}
+
+.error {
+  font-size: 0.82rem;
+  color: #dc2626;
+  margin: 0;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #002868, #1a3d7a);
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.02em;
+}
+
+.btn:hover  { opacity: 0.9; }
+.btn:active { transform: scale(0.98); }
+
+/* Footer */
+.footer {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 1.5rem 0 0;
+  line-height: 1.5;
+}
