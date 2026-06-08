@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Empleados from './pages/Empleados';
 import Carnet from './pages/Carnet';
 import Validar from './pages/Validar';
+import NuevoEmpleado from './pages/NuevoEmpleado';
 import Portal from './pages/portal/Portal';
 import PortalCarnet from './pages/portal/PortalCarnet';
 
@@ -32,6 +33,7 @@ export default function App() {
             <Route index element={<Navigate to="/dashboard" replace />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="empleados" element={<Empleados />} />
+            <Route path="empleados/nuevo" element={<NuevoEmpleado />} />
             <Route path="carnets/:id" element={<Carnet />} />
             <Route path="validar" element={<Validar />} />
             <Route path="validar/:id" element={<Validar />} />

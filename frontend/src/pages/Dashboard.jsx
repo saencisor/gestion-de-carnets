@@ -40,7 +40,7 @@ export default function Dashboard() {
           <h1 className={styles.title}>Dashboard</h1>
           <p className={styles.welcome}>Bienvenido, <strong>{user?.username}</strong></p>
         </div>
-        <Link to="/empleados" className={styles.btnPrimary}>
+        <Link to="/empleados/nuevo" className={styles.btnPrimary}>
           + Nuevo Empleado
         </Link>
       </div>

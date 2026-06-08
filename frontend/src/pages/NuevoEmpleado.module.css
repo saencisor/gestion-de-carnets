@@ -1,0 +1,196 @@
+.page {
+  padding: 2rem;
+  max-width: 860px;
+}
+
+.topBar {
+  margin-bottom: 1.5rem;
+}
+
+.backLink {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  background: rgba(0,40,104,0.07);
+  transition: background 0.15s;
+}
+
+.backLink:hover { background: rgba(0,40,104,0.14); }
+
+/* Tarjeta */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  background: var(--primary);
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+}
+
+.sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0;
+}
+
+/* Error global */
+.errorGlobal {
+  margin: 1.25rem 1.5rem 0;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Formulario */
+.form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.5rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.req { color: var(--secondary); }
+
+.input {
+  padding: 0.68rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0,40,104,0.08);
+}
+
+.inputError { border-color: #fca5a5; }
+.inputError:focus { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220,38,38,0.08); }
+
+.fieldError {
+  font-size: 0.78rem;
+  color: #dc2626;
+  margin: 0;
+}
+
+/* Checkbox */
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  background: #f0f9ff;
+  border: 1.5px solid #bae6fd;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Acciones */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.btnCancel {
+  padding: 0.7rem 1.4rem;
+  border-radius: 9px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btnCancel:hover { background: #f8fafc; }
+
+.btnSubmit {
+  padding: 0.7rem 1.6rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btnSubmit:hover:not(:disabled) { background: var(--primary-dark); }
+.btnSubmit:active:not(:disabled) { transform: scale(0.98); }
+.btnSubmit:disabled { background: #94a3b8; cursor: not-allowed; }

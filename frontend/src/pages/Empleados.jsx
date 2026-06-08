@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../services/api';
 import styles from './Empleados.module.css';
 
@@ -77,13 +77,16 @@ export default function Empleados() {
           <h1 className={styles.title}>Empleados</h1>
           <p className={styles.sub}>{empleados.length} registros en total</p>
         </div>
-        <input
+        <div className={styles.headerActions}>
+          <input
           className={styles.search}
           type="text"
           placeholder="Buscar por nombre, cédula o cargo..."
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
         />
+          <Link to="/empleados/nuevo" className={styles.btnNuevo}>+ Nuevo empleado</Link>
+        </div>
       </div>
 
       {loading ? (
